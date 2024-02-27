@@ -55,7 +55,6 @@ const tela = document.getElementById('teladojogo');
 const contexto = tela.getContext('2d');
 const telaFimDoJogo = document.getElementById('fimdojogo');
 const imagemFimDoJogo = document.getElementById('imagemfimdojogo');
-const somFimDoJogo = document.getElementById('somfimdojogo');
 
 const larguraDaTela = tela.width = window.innerWidth;
 const alturaDaTela = tela.height = window.innerHeight;
@@ -119,7 +118,6 @@ function verificarcolisao() {
 }
 
 function fimdojogo() {
-    somFimDoJogo.play();
     telaFimDoJogo.style.display = 'flex';
 }
 
