@@ -146,11 +146,13 @@ document.addEventListener('keydown', e => {
 let inicioDoToqueX, inicioDoToqueY;
 
 document.addEventListener('touchstart', e => {
+    e.preventDefault();
     inicioDoToqueX = e.touches[0].clientX;
     inicioDoToqueY = e.touches[0].clientY;
 });
 
 document.addEventListener('touchmove', e => {
+    e.preventDefault(); 
     const fimDoToqueX = e.touches[0].clientX;
     const fimDoToqueY = e.touches[0].clientY;
 
@@ -170,6 +172,11 @@ document.addEventListener('touchmove', e => {
             movercima();
         }
     }
+});
+
+document.addEventListener('touchend', () => {
+    inicioDoToqueX = null;
+    inicioDoToqueY = null;
 });
 
 function movercima() {
